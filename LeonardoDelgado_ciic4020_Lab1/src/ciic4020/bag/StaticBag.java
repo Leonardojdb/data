@@ -116,10 +116,8 @@ public class StaticBag implements Bag {
 		if (this.isEmpty()) {
 			return frqBag;		
 		}for (Object element : this) {
-			if (this.count(element) > this.count(obj)) {
-				if (!frqBag.isMember(element)) {
-					frqBag.add(element);
-				}
+			if (this.count(element) > this.count(obj) && !frqBag.isMember(element)) {
+					frqBag.add(element);				
 			}
 		}
 		return frqBag;
